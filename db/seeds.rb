@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(email: 'w@w.w', password: '111111')
+
+5.times do
+  ad = Ad.new
+  ad.title = Faker::Lorem.sentence(word_count: rand(2..6))
+  ad.content = Faker::Lorem.paragraph(sentence_count: rand(6..12))
+  ad.user = User.first
+  ad.save ? puts('Ad created') : puts('Error')
+end
