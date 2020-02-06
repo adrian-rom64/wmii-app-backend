@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'application#info'
 
   devise_for(
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
   )
 
   resources :ads
-  
+
 end
