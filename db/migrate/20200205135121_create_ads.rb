@@ -5,6 +5,7 @@ class CreateAds < ActiveRecord::Migration[6.0]
       t.text :content
       t.references :user, null: false, foreign_key: true
       t.string :background
+      t.integer :year
 
       t.timestamps
     end

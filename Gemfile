@@ -45,8 +45,10 @@ gem "devise", "~> 4.7"
 
 gem "rack-cors", "~> 1.1"
 
-gem "devise-jwt", "~> 0.6.0"
-
 gem "faker", "~> 2.10"
 
 gem "carrierwave", "~> 2.0"
+
+gem "jwt", "~> 2.2"
+
+gem "webtoken", "~> 0.0.5"

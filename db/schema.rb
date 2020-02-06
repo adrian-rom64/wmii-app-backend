@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_02_06_100142) do
     t.text "content"
     t.integer "user_id", null: false
     t.string "background"
+    t.integer "year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_ads_on_user_id"
@@ -25,14 +26,6 @@ ActiveRecord::Schema.define(version: 2020_02_06_100142) do
   create_table "images", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "jwt_blacklists", force: :cascade do |t|
-    t.string "jti"
-    t.datetime "exp"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
   end
 
   create_table "users", force: :cascade do |t|
