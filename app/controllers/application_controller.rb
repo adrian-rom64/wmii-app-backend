@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  respond_to :json
   helper_method :full_url
 
   def info
