@@ -3,7 +3,6 @@ class AuthController < ApplicationController
 
   def login
     @user = User.find_by(email: params[:email])
-
     if @user&.valid_password?(params[:password])
       secret = Rails.application.credentials.secret_key_base
       token = JWT.encode(token_params, secret, 'HS256')
