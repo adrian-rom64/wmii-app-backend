@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_02_06_100142) do
     t.integer "user_id", null: false
     t.string "background"
     t.integer "year"
+    t.string "specialization"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_ads_on_user_id"

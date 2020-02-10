@@ -38,7 +38,7 @@ class AdsController < ApplicationController
   private
 
   def ad_params
-    params.require(:ad).permit(:title, :content, :background)
+    params.permit(:title, :content, :background, :year, :specialization)
   end
 
   def find_ad

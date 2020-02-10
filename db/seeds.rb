@@ -14,9 +14,10 @@ User.create(email: 'w@w.w', password: '111111')
   ad.content = Faker::Lorem.paragraph(sentence_count: rand(8..30))
   ad.user = User.first
   ad.year = rand(1..4)
+  ad.specialization = 'inf'
   if rand(2) == 0
     filename = "rand#{rand(1..4)}.jpeg"
     ad.background = Rails.root.join('app', 'assets', 'images', filename).open
   end
-  ad.save ? puts('Ad created') : puts('Error')
+  ad.save ? puts('Ad created') : puts(ad.errors.full_messages)
 end

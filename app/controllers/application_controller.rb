@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
 
   def authenticate
     result = authenticate!
-    return true if result == :ok
+    return true if result == 'ok'
     render json: {error: result}, status: :unauthorized
     return false
   end
@@ -38,7 +38,7 @@ class ApplicationController < ActionController::API
     $current_user = user
     return 'user not found' unless user
 
-    return :ok
+    return 'ok'
   end
 
   def auth_payload
