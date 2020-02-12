@@ -52,3 +52,7 @@ gem "carrierwave", "~> 2.0"
 gem "jwt", "~> 2.2"
 
 gem "webtoken", "~> 0.0.5"
+
+gem 'carrierwave-aws'
+gem 'mini_magick'
+gem 'aws-sdk-rails'
