@@ -7,7 +7,7 @@ if Rails.env.production?
 
     config.aws_credentials = {
       access_key_id:     Rails.application.credentials.aws[:access_key_id],
-      secret_access_key: Rails.application.credentials.aws[:secret_access_key]
+      secret_access_key: Rails.application.credentials.aws[:secret_access_key],
       region:            'eu-central-1'
     }
   end
