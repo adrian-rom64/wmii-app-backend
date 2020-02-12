@@ -3,7 +3,7 @@ class AdsController < ApplicationController
   before_action :find_ad, only: [:destroy, :show, :update]
 
   def index
-    @ads = Ad.all
+    @ads = Ad.all.order(updated_at: :desc)
     @content_length = params.has_key?(:content_length) ? params[:content_length].to_i : 80
     render :index, formats: :json
   end
